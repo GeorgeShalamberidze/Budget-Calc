@@ -1,0 +1,30 @@
+.header {
+  width: 100vw;
+  background: rgb(78, 102, 109);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+h1 {
+  color: white
+}
+
+.total-budget {
+  width: 100%;
+  background-color: rgb(139, 122, 122);
+  height: 250px;
+}
+
+.total-budget .total-budget-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.total-budget-container p {
+  font-size: 70px;
+  font-weight: bold;
+  color: white;
+}

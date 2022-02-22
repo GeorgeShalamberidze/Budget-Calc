@@ -1,0 +1,55 @@
+.item {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 10px;
+  height: 100%;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.item:hover .button {
+  transform: scale(1)
+}
+
+.amount-place {
+  padding: 3px 7px;
+  border-radius: 5px;
+}
+
+.income .description-place {
+  color: rgb(81, 202, 81);
+  font-weight: bold;
+}
+.income .amount-place{
+  background: rgba(50, 211, 50, 0.486);
+}
+
+.expense .description-place {
+  color: rgb(182, 40, 40);
+  font-weight: bold;
+}
+.expense .amount-place{
+  background: rgba(228, 107, 107, 0.644);
+}
+
+.button {
+  position: absolute;
+  top: -17px;
+  right: -17px;
+  background: black;
+  outline: none;
+  border-style: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: white;
+  transform: scale(0);
+  transition: transform .1s ease-in-out;
+  cursor: pointer;
+}
+
+.item .button:hover {
+  transform: scale(1.15);
+}

@@ -1,0 +1,12 @@
+<div class="item" [ngClass]="{'income': item.amount > 0, 'expense': item.amount < 0}">
+  <div class="description-place" >
+    {{item.description}}
+  </div>
+
+  <div class="amount-place">
+    {{item.amount}}
+  </div>
+
+  <button class="button">X</button>
+</div>
+

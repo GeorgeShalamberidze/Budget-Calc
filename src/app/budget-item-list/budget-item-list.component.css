@@ -1,0 +1,33 @@
+.budget-item-container {
+  width: 580px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 50px;
+}
+
+.budget-item-container .income-section,
+.budget-item-container .expense-section {
+  flex: 1;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.budget-item-container .income-section h1{
+  color: rgb(50, 211, 50);
+  font-size: 32px;
+}
+
+.budget-item-container .expense-section h1{
+  color: rgb(182, 40, 40);
+  font-size: 32px;
+}
+
+.expense-section .budget-items div,
+.income-section .budget-items div{
+  background: rgb(235, 230, 230);
+  width: 90%;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+

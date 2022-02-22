@@ -1,0 +1,42 @@
+.add-item {
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid rgb(236, 233, 233);
+}
+
+.add-item-container {
+  padding: 20px;
+  display: flex;
+  width: 650px;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+
+.add-item-container input.num-input,
+.add-item-container input.desc-input {
+  height: 30px;
+  background-color: rgba(240, 234, 234, 0.945);
+  outline: none;
+  border-style: none;
+  border-radius: 5px;
+  display: flex;
+}
+
+.add-item-container input.num-input {
+  width: 100px;
+  flex: 2.2
+}
+
+.add-item-container input.desc-input {
+  width: 400px;
+}
+
+.add-item-container input.num-input::placeholder,
+.add-item-container input.desc-input::placeholder {
+  padding-left: 5px;
+}
+
+.add-button button{
+  height: 30px;
+  width: 50px;
+}
