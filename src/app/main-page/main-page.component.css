@@ -28,3 +28,11 @@ h1 {
   font-weight: bold;
   color: white;
 }
+
+.total-budget-container .green {
+  color: rgba(50, 211, 50, 1);
+}
+
+.total-budget-container .red {
+  color: red;
+}

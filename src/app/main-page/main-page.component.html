@@ -4,7 +4,7 @@
 
 <div class="total-budget">
   <div class="total-budget-container">
-    <p>1500</p>
+    <p [ngClass]="{'green': totalBudget > 0, 'red': totalBudget < 0}">{{ totalBudget }}</p>
   </div>
 </div>
 

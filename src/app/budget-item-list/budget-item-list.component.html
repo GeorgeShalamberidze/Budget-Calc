@@ -4,6 +4,7 @@
 
     <div class="budget-items"  *ngFor="let item of items"> 
       <div *ngIf="item.amount >= 0">
+        <!-- <app-budget-item-card [item]="item" (click)="onModalOpen(item)"></app-budget-item-card> -->
         <app-budget-item-card [item]="item"></app-budget-item-card>
       </div>
     </div>
@@ -15,6 +16,7 @@
     <div class="budget-items"  *ngFor="let item of items">
       <div *ngIf="item.amount < 0">
         <app-budget-item-card [item]="item"></app-budget-item-card>
+        <!-- <app-budget-item-card [item]="item" (click)="onModalOpen(item)"></app-budget-item-card> -->
       </div>
     </div>
   </div>

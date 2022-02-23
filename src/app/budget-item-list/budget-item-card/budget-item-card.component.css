@@ -1,12 +1,16 @@
 .item {
-  display: flex;
   width: 100%;
-  justify-content: space-between;
+  cursor: pointer;
   padding: 0 10px;
   height: 100%;
-  align-items: center;
-  cursor: pointer;
   position: relative;
+}
+
+.item-content-container {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .item:hover .button {

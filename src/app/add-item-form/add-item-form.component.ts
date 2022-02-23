@@ -13,10 +13,11 @@ export class AddItemFormComponent implements OnInit {
   constructor(private itemService: ItemServiceService) { }
 
   ngOnInit(): void {
+
   }
 
   addItem(form: NgForm) {
-    let newArr = [this.itemService.budgetItems, form.value]
-    this.itemService.budgetItems = newArr
+    this.itemService.addItem(form.value)
+    form.reset()
   }
 }

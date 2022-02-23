@@ -7,10 +7,14 @@ import { BudgetItem } from '../models/budget-item.model';
 })
 export class ItemServiceService {
   private _budgetItems$: BehaviorSubject<BudgetItem[]> = new BehaviorSubject<BudgetItem[]>([
-    {amount: 25, description: 'Test123'},
-    {amount: -25, description: 'Test123'},
-    {amount: -25, description: 'Test123'},
-    {amount: -25, description: 'Test123'}
+    { amount: -550, description: 'Rent1' },
+    { amount: -550, description: 'Rent2' },
+    { amount: -550, description: 'Rent3' },
+    { amount: -550, description: 'Rent4' },
+    { amount: 1000, description: "Salary1" },
+    { amount: 1000, description: "Salary2" },
+    { amount: 1000, description: "Salary3" },
+    { amount: 1000, description: "Salary4" },
   ])
   constructor() { }
 
@@ -24,5 +28,17 @@ export class ItemServiceService {
 
   set budgetItems(value: BudgetItem[]) {
     this._budgetItems$.next(value)
+  }
+
+  deleteItem(item: BudgetItem) {
+    let currItems: BudgetItem[] = this.budgetItems
+    let index = currItems.indexOf(item)
+    currItems.splice(index, 1)
+    this.budgetItems = currItems
+  }
+
+  addItem(item: BudgetItem) {
+    let newArr = [...this.budgetItems, item]
+    this.budgetItems = newArr
   }
 }

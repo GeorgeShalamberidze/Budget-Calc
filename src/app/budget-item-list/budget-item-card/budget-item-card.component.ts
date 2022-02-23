@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { BudgetItem } from 'src/app/shared/models/budget-item.model';
+import { ItemServiceService } from 'src/app/shared/services/item-service.service';
 
 @Component({
   selector: 'app-budget-item-card',
@@ -8,10 +9,14 @@ import { BudgetItem } from 'src/app/shared/models/budget-item.model';
 })
 export class BudgetItemCardComponent implements OnInit {
   @Input() item!: BudgetItem
-  constructor() { }
+  
+  constructor(private itemService: ItemServiceService) { }
 
   ngOnInit(): void {
-    // console.log("a", this.item)
+
   }
 
+  deleteButton(item: BudgetItem) {
+    this.itemService.deleteItem(item)
+  }
 }
