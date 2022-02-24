@@ -9,12 +9,12 @@ export class ItemServiceService {
   private _budgetItems$: BehaviorSubject<BudgetItem[]> = new BehaviorSubject<BudgetItem[]>([
     { amount: -550, description: 'Rent1' },
     { amount: -550, description: 'Rent2' },
-    { amount: -550, description: 'Rent3' },
-    { amount: -550, description: 'Rent4' },
-    { amount: 1000, description: "Salary1" },
-    { amount: 1000, description: "Salary2" },
-    { amount: 1000, description: "Salary3" },
-    { amount: 1000, description: "Salary4" },
+    // { amount: -550, description: 'Rent3' },
+    // { amount: -550, description: 'Rent4' },
+    // { amount: 1000, description: "Salary1" },
+    // { amount: 1000, description: "Salary2" },
+    // { amount: 1000, description: "Salary3" },
+    // { amount: 1000, description: "Salary4" },
   ])
   constructor() { }
 
@@ -40,5 +40,13 @@ export class ItemServiceService {
   addItem(item: BudgetItem) {
     let newArr = [...this.budgetItems, item]
     this.budgetItems = newArr
+  }
+
+  editItem(oldValue: BudgetItem, newValue: BudgetItem) {
+    let currArr = this.budgetItems
+    let oldIndex = currArr.indexOf(oldValue)
+    currArr.splice(oldIndex, 1, newValue)
+    currArr.pop()
+    this.budgetItems = currArr
   }
 }

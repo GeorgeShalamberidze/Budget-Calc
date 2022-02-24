@@ -1,0 +1,6 @@
+<h2>Edit {{item.description}}</h2>
+<app-add-item-form
+[item]="item"
+(formSubmit)="onModalClose($event)"
+></app-add-item-form>
+<!-- <button (click)="onModalClose(item)">asd</button> -->
